@@ -1,20 +1,9 @@
 # Prototype-2
 Simple Unity scene, contains basic mechanics. Part of Junior Programmer Pathway in Unity Course
 
-Contains basic funcionality like:
+Contains funcionality like:
 
-Driving vehicle forward, backwards and rotating accordingly to input
-Collision detection between vehicle and obstacles
-Camera follow
-
-Besides that, challenge completed and included here. Challange tasks:
-
-Make plane fly forward and up or down according to input
-Position camera on the side and make it follow the plane
-Write rotation script for propeller to give plane some spirit
-Bonus Challenge after Unit 1 also completed and included here. Challenge tasks:
-
-Create more obstacles
-Create NPC vehicles driving in our direction
-Create possibility to change camera angle by pressing key
-Create split-screen local multiplayer
+- Player horizontal movement
+- Timer with interval which is spawning animals at the top of the screen at random location with different speed
+- Player shooting projectiles
+- Collision detection and object removal when triggered
