@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    private static int lives = 3;
+    private static int score = 0;
+   // public GameObject PlayerStats;
     private void OnTriggerEnter(Collider other)
     {
-        //Destroy on collision
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (gameObject.CompareTag("Projectile"))
+        {
+            if (!other.gameObject.CompareTag("Player"))
+            {
+                score++;
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+                Debug.Log("Score: " + score);
+            }
+        }
+        else if (other.gameObject.CompareTag("Player"))
+        {
+            lives--;
+            Destroy(gameObject);
+            Debug.Log("Lives: " + lives);
+            if (lives == 0)
+            {
+                Destroy(other.gameObject);
+                Debug.Log("Game Over!!");
+            }
+        }
     }
 }
